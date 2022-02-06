@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="homepage_css.css">
+        <title>The Bazar</title>
+        <script src="js_homepage.js"></script>
+    </head>
+    <div class="float-container">
+        <div class="float-child">
+            <h1>Welcome to Stock Bazar</h1>
+            <p>How it works: The below give are three stocks and their respective price which changes every 3 seconds.<br> You have 1000 coins default at first. It changes as you buy any Stock</p>
+            <table>
+                <tr><td> <label>Stock 1 price:</label><span id="price1">100</span></td>
+                    <td><input type="text" id="stck1" placeholder="Enter quantity..."></td>
+                </tr>
+                <tr><td> <label>Stock 2 price:</label><span id="price2">150</span></td>
+                    <td><input type="text" id="stck2" placeholder="Enter quantity..."></td>
+                </tr>
+                <tr><td> <label>Stock 3 price:</label><span id="price3">50</span></td>
+                    <td><input type="text" id="stck3" placeholder="Enter quantity..."></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name" placeholder="Enter your name" ></td>
+                    <td>Your Balance: <span id="mymoney">1000</span></td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="submit" id="submit" value="Trade" onclick="total_money()"></td>
+                    <td><input type="button" id="refresh" value="Load" onclick="change()"></td>
+                    
+                </tr>
+            </table>
+            Last action:<br>
+            <span id="final_data"></span>
+            <span id="try">________</span>
+        </div>
+        <div class="float-child">
+            <h1>Your Portfolio</h1>
+            Name: <span id="user"> </span></br>
+            <!-- Balance: <span id="mymoney"> </span> -->
+            <center>
+            <table border="1">
+                <tr>
+                    <td>Holdings</td>
+                    <td>Holdings</td>
+                    <td>Options</td>
+                </tr>
+                <tr>
+                    <td>Stock 1</td>
+                    <td><span id="hold1">0</span></td>
+                    <td><input type="button" id="sell1" value="Sell" onclick="sold(this.id)"></td>
+                </tr>
+                <tr>
+                    <td>Stock 2</td>
+                    <td><span id="hold2">0</span></td>
+                    <td><input type="button" id="sell2" value="Sell" onclick="sold(this.id)"></td>
+                </tr>
+                <tr>
+                    <td>Stock 3</td>
+                    <td><span id="hold3">0</span></td>
+                    <td><input type="button" id="sell3" value="Sell" onclick="sold(this.id)"></td>
+                </tr>
+            </table>
+            <span id="error">
+            </span>
+        </center>
+        </div>
+    </div>
+</html>
